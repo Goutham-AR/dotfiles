@@ -1,0 +1,97 @@
+# typescript
+[[language]]
+name = "typescript"
+language-servers = ["typescript-language-server", "tailwindcss-react", "eslint"]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = ["typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls"]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint"]
+formatter = { command = "prettier", args = ["--parser", "javascript"] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+language-servers = ["typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls"]
+formatter = { command = "prettier", args = ["--parser", "javascript"] }
+auto-format = true
+
+[[language]]
+name = "html"
+language-servers = ["emmet-ls"]
+
+[[language]]
+name = "json"
+formatter = { command = "prettier", args = ["--parser", "json"]}
+
+# C++
+[language-server.clangd1]
+command = "clangd"
+args = [
+  "--compile-commands-dir=."
+]
+
+[[language]]
+name = "cpp"
+language-servers = ["clangd1"]
+file-types = ["cpp", "h", "cc", "hh"]
+roots = ["CMakeLists.txt"]
+formatter = { command = "clang-format" }
+
+# python
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "python"
+file-types = ["py","pyi","py3","pyw",".pythonstartup",".pythonrc"]
+shebangs = ["python"]
+roots = [".", "pyproject.toml", "pyrightconfig.json"]
+comment-token = "#"
+language-servers = ["pyright", "ruff"]
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[language.formatter]
+command = "black"
+args = [
+  "-",
+  "--quiet",
+  "--line-length=88"
+]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.pyright.config]
+reportMissingTypeStubs = false
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+autoImportCompletions = true
+
+[language-server.ruff]
+command = "ruff"
+
+[language-server.ruff.config]
+settings = {args = []}
+
+# golang
+[[language]]
+name = "go"
+scope = "source.go"
+injection-regex = "go"
+file-types = ["go"]
+roots = ["go.work", "go.mod"]
+auto-format = true
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "gopls", "golangci-lint-langserver" ]
+indent = { tab-width = 4, unit = "\t" }

@@ -1,0 +1,71 @@
+# theme = "tokyonight"
+theme = "gruvbox_material_hard"
+[editor]
+auto-format = true
+line-number = "relative"
+cursorline = true
+auto-completion = true
+bufferline = "always"
+true-color = true
+mouse = true
+
+[editor.whitespace.characters]
+space = " "
+nbsp = "⍽"    # Non Breaking SPace
+tab = "→"
+newline = "⏎"
+tabpad = "·"
+
+[editor.file-picker]
+# hidden = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+character = "╎"
+render = true
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = ""
+
+[editor.lsp]
+auto-signature-help = true
+display-messages = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "disable"
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+center = ["file-absolute-path", "diagnostics"]
+right = ["workspace-diagnostics", "selections", "position", "total-line-numbers", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[keys.normal]
+"C-e" = ":bc"
+space.w = ":w"
+Cmd-s = ":w"
+space.q = ":q"
+space.n = ":new"
+
+tab = "goto_next_buffer"
+S-tab = "goto_previous_buffer"
+
+space.v = "vsplit"
+space.h = "hsplit"
+space."." = "file_picker_in_current_buffer_directory"
+C-h = "jump_view_left"
+C-l = "jump_view_right"
+C-k = "jump_view_up"
+C-j = "jump_view_down"
