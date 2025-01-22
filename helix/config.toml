@@ -33,7 +33,7 @@ enable = true
 wrap-indicator = ""
 
 [editor.lsp]
-auto-signature-help = true
+auto-signature-help = false
 display-messages = true
 
 [editor.inline-diagnostics]
@@ -42,7 +42,7 @@ other-lines = "disable"
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name"]
-center = ["file-absolute-path", "diagnostics"]
+center = ["diagnostics"]
 right = ["workspace-diagnostics", "selections", "position", "total-line-numbers", "file-encoding", "file-line-ending", "file-type"]
 separator = "│"
 mode.normal = "NORMAL"

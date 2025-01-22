@@ -1,35 +1,7 @@
-# typescript
 [[language]]
 name = "typescript"
-language-servers = ["typescript-language-server", "tailwindcss-react", "eslint"]
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
+formatter = { command = "prettier" }
 auto-format = true
-
-[[language]]
-name = "tsx"
-language-servers = ["typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls"]
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
-auto-format = true
-
-[[language]]
-name = "javascript"
-language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint"]
-formatter = { command = "prettier", args = ["--parser", "javascript"] }
-auto-format = true
-
-[[language]]
-name = "jsx"
-language-servers = ["typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls"]
-formatter = { command = "prettier", args = ["--parser", "javascript"] }
-auto-format = true
-
-[[language]]
-name = "html"
-language-servers = ["emmet-ls"]
-
-[[language]]
-name = "json"
-formatter = { command = "prettier", args = ["--parser", "json"]}
 
 # C++
 [language-server.clangd1]
