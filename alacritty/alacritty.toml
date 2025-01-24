@@ -1,3 +1,9 @@
+# [general]
+# import = [
+#   "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
+# ]
+
+
 [env]
 TERM = "xterm-256color"
 
@@ -13,6 +19,3 @@ option_as_alt = "Both"
 normal.family = "MesloLGS Nerd Font Mono"
 
 size = 14
-
-[cursor]
-style = { blinking = "On"}

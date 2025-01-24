@@ -1,7 +1,7 @@
 # theme = "tokyonight"
 theme = "gruvbox_material_hard"
 [editor]
-auto-format = true
+auto-format = false
 line-number = "relative"
 cursorline = true
 auto-completion = true

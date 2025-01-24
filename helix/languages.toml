@@ -1,7 +1,7 @@
 [[language]]
 name = "typescript"
-formatter = { command = "prettier" }
-auto-format = true
+# formatter = { command = "npx", args = ["prettier", "--config", ".prettierrc.json", "--parser", "typescript"] }
+auto-format = false
 
 # C++
 [language-server.clangd1]
