@@ -2,5 +2,9 @@ build/
 out/
 dist/
 node_modules/
+external/*
+.venv/*
 
 !.gitignore
+!.*
+.*/*

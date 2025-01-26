@@ -11,7 +11,7 @@ mouse = true
 
 [editor.whitespace.characters]
 space = " "
-nbsp = "⍽"    # Non Breaking SPace
+nbsp = "⍽"    # Non Breaking Space
 tab = "→"
 newline = "⏎"
 tabpad = "·"
@@ -58,6 +58,11 @@ space.w = ":w"
 Cmd-s = ":w"
 space.q = ":q"
 space.n = ":new"
+"C-space" = "signature_help"
+a = ["append_mode", "collapse_selection"]
+i = ["insert_mode", "collapse_selection"]
+V = ["goto_first_nonwhitespace", "extend_to_line_end"]
+D = ["ensure_selections_forward", "extend_to_line_end"]
 
 tab = "goto_next_buffer"
 S-tab = "goto_previous_buffer"
