@@ -1,7 +1,26 @@
 [[language]]
 name = "typescript"
-# formatter = { command = "npx", args = ["prettier", "--config", ".prettierrc.json", "--parser", "typescript"] }
-auto-format = false
+roots = ["package.json"]
+formatter = { command = "prettierd", args = [".ts"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+roots = ["package.json"]
+formatter = { command = "prettierd", args = [".js"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+roots = ["package.json"]
+formatter = { command = "prettierd", args = [".tsx"] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+roots = ["package.json"]
+formatter = { command = "prettierd", args = [".jsx"] }
+auto-format = true
 
 # C++
 [language-server.clangd1]
@@ -16,6 +35,7 @@ language-servers = ["clangd1"]
 file-types = ["cpp", "h", "cc", "hh"]
 roots = ["CMakeLists.txt"]
 formatter = { command = "clang-format" }
+auto-format = false
 
 # python
 [[language]]
