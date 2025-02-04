@@ -1,7 +1,7 @@
 require("core.options")
 require("core.keymaps")
+require("core.autocmd")
 
-vim.g.have_nerd_font = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -15,12 +15,20 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-    require("plugins.gruvbox"),
-    require("plugins.vim_sleuth"),
-    require("plugins.bufferline"),
-    require("plugins.autopairs"),
-    require("plugins.ntree"),
-    require("plugins.tmux_navigator"),
-    require("plugins.telescope"),
-})
+ require("lazy").setup({
+     -- require("plugins.treesitter"),
+     -- require("plugins.alpha"),
+     require("plugins.vimux"),
+     require("plugins.gruvbox"),
+     require("plugins.vim_sleuth"),
+     require("plugins.bufferline"),
+     require("plugins.autopairs"),
+     require("plugins.vim_sandwich"),
+     -- require("plugins.whichkey"),
+     require("plugins.ntree"),
+     require("plugins.lsp"),
+     require("plugins.cmp"),
+     require("plugins.tmux_navigator"),
+     require("plugins.fzf"),
+     require("plugins.telescope"),
+ })

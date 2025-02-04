@@ -55,7 +55,6 @@ j = { k = "normal_mode" }
 [keys.normal]
 "C-e" = ":bc"
 space.w = ":w"
-Cmd-s = ":w"
 space.q = ":q"
 space.n = ":new"
 "C-space" = "signature_help"
@@ -63,12 +62,9 @@ a = ["append_mode", "collapse_selection"]
 i = ["insert_mode", "collapse_selection"]
 V = ["goto_first_nonwhitespace", "extend_to_line_end"]
 D = ["ensure_selections_forward", "extend_to_line_end"]
-C-p = "@:sh "
 C-c = "@:sh cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -S . -B build -G Ninja <ret>"
-
 tab = "goto_next_buffer"
 S-tab = "goto_previous_buffer"
-
 space.v = "vsplit"
 space.h = "hsplit"
 space."." = "file_picker_in_current_buffer_directory"

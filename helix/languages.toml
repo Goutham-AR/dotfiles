@@ -35,7 +35,7 @@ language-servers = ["clangd1"]
 file-types = ["cpp", "h", "cc", "hh"]
 roots = ["CMakeLists.txt"]
 formatter = { command = "clang-format" }
-auto-format = false
+auto-format = true
 
 # python
 [[language]]
