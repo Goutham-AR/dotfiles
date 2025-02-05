@@ -18,6 +18,9 @@ vim.opt.rtp:prepend(lazypath)
  require("lazy").setup({
      -- require("plugins.treesitter"),
      -- require("plugins.alpha"),
+     require("plugins.indent"),
+     require("plugins.gitsigns"),
+     require("plugins.fugitive"),
      require("plugins.vimux"),
      require("plugins.gruvbox"),
      require("plugins.vim_sleuth"),

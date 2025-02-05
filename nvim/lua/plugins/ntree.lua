@@ -15,10 +15,12 @@ return {
 				visible = true,
 			},
 			window = {
+                position = "current",
 				mappings = {
 					["\\"] = "close_window",
 				},
 			},
+            hijack_netrw_behaviour = "open_current",
 		},
 	},
 }
