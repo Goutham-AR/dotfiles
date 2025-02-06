@@ -32,6 +32,9 @@ return {
                 }
             }
         })
+        lspconfig.jsonls.setup({
+            capabilities = cap,
+        })
 
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
         vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to Definition" })

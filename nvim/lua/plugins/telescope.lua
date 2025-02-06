@@ -39,6 +39,7 @@ return {
         vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Find Buffers" })
         vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find Help" })
         vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "Find keymaps" })
+        vim.keymap.set("n", "<leader>.", function() builtin.find_files({ cwd = vim.fn.expand("%:p:h") }) end, { desc = "Find files in current  buffer directory" })
     end
 
 }

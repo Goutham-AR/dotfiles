@@ -18,13 +18,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
         map('<leader>ws', require("fzf-lua").lsp_workspace_symbols, "List workspace symbols")
     end
 })
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    -- Check if opening a directory
-    local directory = vim.fn.argv(0)
-    if vim.fn.isdirectory(directory) == 1 then
-      vim.cmd("Neotree toggle")
-      vim.cmd("cd " .. directory) -- Set working directory
-    end
-  end
-})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+  -- callback = function()
+    -- local directory = vim.fn.argv(0)
+    -- if vim.fn.isdirectory(directory) == 1 then
+      -- vim.cmd("Neotree toggle")
+      -- vim.cmd("cd " .. directory) -- Set working directory
+    -- end
+  -- end
+-- })
