@@ -1,7 +1,0 @@
-build/
-out/
-node_modules/
-external/*
-.venv/*
-
-!.gitignore
