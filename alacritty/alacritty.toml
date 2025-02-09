@@ -1,7 +1,7 @@
-# [general]
-# import = [
-#   "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
-# ]
+[general]
+import = [
+  "~/.config/alacritty/themes/themes/neobones_dark.toml"
+]
 
 
 [env]
