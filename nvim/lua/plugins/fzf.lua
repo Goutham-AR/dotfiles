@@ -1,7 +1,14 @@
 return {
   "ibhagwan/fzf-lua",
+  event = "VimEnter",
   config = function()
     local fzf = require("fzf-lua")
+    fzf.setup({
+      defaults = {
+        file_icons = false,
+        git_icons = false,
+      },
+    })
     vim.keymap.set("n", "<leader>f", function()
       fzf.files({ cwd = vim.fn.getcwd() })
     end, { desc = "Find Files" })
