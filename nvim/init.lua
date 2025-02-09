@@ -18,6 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   -- require("plugins.treesitter"),
   -- require("plugins.alpha"),
+  require("plugins.undotree"),
   require("plugins.oil"),
   require("plugins.lualine"),
   require("plugins.indent"),

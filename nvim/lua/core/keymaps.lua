@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.keymap.set("n", "<leader>w", "<cmd>:w<CR>")
 vim.keymap.set("n", "<leader>q", "<cmd>:q<CR>")
-vim.keymap.set("n", "<leader>e", "<cmd>:qa<CR>")
+-- vim.keymap.set("n", "<leader>e", "<cmd>:qa<CR>")
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("n", "<Tab>", "<cmd>:bn<CR>")
 vim.keymap.set("n", "<S-Tab>", "<cmd>:bp<CR>")
@@ -18,4 +18,4 @@ vim.keymap.set("n", "<leader>x", function()
     vim.cmd("VimuxRunCommand('" .. cmd .. "')")
   end
 end, { desc = "Run custom command in Vimux" })
-vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set("n", "<leader>d", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
