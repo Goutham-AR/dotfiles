@@ -37,12 +37,21 @@ return {
     vim.keymap.set("n", "<leader>f", function()
       builtin.find_files({ cwd = vim.fn.getcwd() })
     end, { desc = "Find Files" })
-    vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live Grep" })
+    vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "Live Grep" })
     vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Find Buffers" })
-    vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find Help" })
-    vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "Find keymaps" })
+    vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "Find Help" })
+    vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "Find keymaps" })
+    vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
+    vim.keymap.set("n", "<leader>sb", builtin.builtin, { desc = "Find builtin" })
     vim.keymap.set("n", "<leader>.", function()
       builtin.find_files({ cwd = vim.fn.expand("%:p:h") })
     end, { desc = "Find files in current  buffer directory" })
+    vim.keymap.set("n", "<leader>/", function()
+      -- You can pass additional configuration to Telescope to change the theme, layout, etc.
+      builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+        winblend = 10,
+        previewer = false,
+      }))
+    end, { desc = "[/] Fuzzily search in current buffer" })
   end,
 }

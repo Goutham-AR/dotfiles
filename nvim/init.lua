@@ -20,6 +20,7 @@ require("lazy").setup({
   require("plugins.undotree"),
   require("plugins.oil"),
   require("plugins.lualine"),
+  require("plugins.yeet"),
   require("plugins.indent"),
   require("plugins.neogit"),
   require("plugins.gitsigns"),
@@ -31,7 +32,8 @@ require("lazy").setup({
   require("plugins.vim_sandwich"),
   require("plugins.lsp"),
   require("plugins.cmp"),
+  require("plugins.lazydev"),
   require("plugins.tmux_navigator"),
-  require("plugins.fzf"),
+  require("plugins.telescope"),
   require("plugins.conform"),
 })
