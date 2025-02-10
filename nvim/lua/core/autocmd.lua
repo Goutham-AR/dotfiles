@@ -9,14 +9,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
   callback = function(event)
-    local builtin = require("telescope.builtin")
     local map = function(keys, func, desc, mode)
       mode = mode or "n"
       vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
     end
-    map("gr", builtin.lsp_references, "Go to references")
-    map("<leader>ds", builtin.lsp_document_symbols, "List document symbols")
-    map("<leader>ws", builtin.lsp_workspace_symbols, "List workspace symbols")
+    map("gr", require("fzf-lua").lsp_references, "Go to references")
+    map("<leader>ds", require("fzf-lua").lsp_document_symbols, "List document symbols")
+    map("<leader>ws", require("fzf-lua").lsp_workspace_symbols, "List workspace symbols")
   end,
 })
 -- vim.api.nvim_create_autocmd("VimEnter", {
