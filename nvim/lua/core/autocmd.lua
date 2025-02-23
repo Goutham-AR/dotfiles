@@ -16,6 +16,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("gr", require("fzf-lua").lsp_references, "Go to references")
     map("<leader>ds", require("fzf-lua").lsp_document_symbols, "List document symbols")
     map("<leader>ws", require("fzf-lua").lsp_workspace_symbols, "List workspace symbols")
+    -- map("<leader>dd", require("fzf-lua").diagnostics_document, "List document diagnostics")
+    -- map("<leader>wd", require("fzf-lua").diagnostics_workspace, "List workspace diagnostics")
   end,
 })
 -- vim.api.nvim_create_autocmd("VimEnter", {

@@ -1,10 +1,12 @@
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
+    -- "hrsh7th/cmp-nvim-lsp",
+    "saghen/blink.cmp",
   },
   config = function()
-    local cap = require("cmp_nvim_lsp").default_capabilities()
+    -- local cap = require("cmp_nvim_lsp").default_capabilities()
+    local cap = require('blink.cmp').get_lsp_capabilities()
 
     local lspconfig = require("lspconfig")
     lspconfig.clangd.setup({
@@ -35,6 +37,8 @@ return {
     lspconfig.jsonls.setup({
       capabilities = cap,
     })
+    lspconfig.cmake.setup({})
+    lspconfig.csharp_ls.setup({ capabilities = cap })
 
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
     vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })

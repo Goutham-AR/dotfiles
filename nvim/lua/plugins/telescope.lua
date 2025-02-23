@@ -21,6 +21,13 @@ return {
   config = function()
     require("telescope").setup({
       defaults = {
+        layout_strategies = "horizontal",
+        layout_config = {
+          horizontal = {
+            prompt_position = "top",
+          },
+        },
+        sorting_strategy = "ascending",
         file_ignore_patterns = {
           "node_modules",
           "external",
