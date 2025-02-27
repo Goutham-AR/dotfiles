@@ -17,15 +17,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("<leader>ds", require("fzf-lua").lsp_document_symbols, "List document symbols")
     map("<leader>ws", require("fzf-lua").lsp_workspace_symbols, "List workspace symbols")
     -- map("<leader>dd", require("fzf-lua").diagnostics_document, "List document diagnostics")
-    -- map("<leader>wd", require("fzf-lua").diagnostics_workspace, "List workspace diagnostics")
+    map("<leader>wd", require("fzf-lua").diagnostics_workspace, "List workspace diagnostics")
   end,
 })
--- vim.api.nvim_create_autocmd("VimEnter", {
--- callback = function()
--- local directory = vim.fn.argv(0)
--- if vim.fn.isdirectory(directory) == 1 then
--- vim.cmd("Neotree toggle")
--- vim.cmd("cd " .. directory) -- Set working directory
--- end
--- end
--- })

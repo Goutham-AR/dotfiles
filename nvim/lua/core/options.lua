@@ -20,3 +20,10 @@ vim.opt.scrolloff = 10
 vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
+vim.opt.undofile = true
+vim.opt.incsearch = true
+

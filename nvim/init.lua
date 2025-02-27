@@ -18,7 +18,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   require("plugins.autosession"),
   require("plugins.hex"),
-  require("plugins.cmake"),
   require("plugins.gruvbox"),
   require("plugins.hardtime"),
   require("plugins.telescope"),
@@ -28,7 +27,7 @@ require("lazy").setup({
   require("plugins.oil"),
   require("plugins.lualine"),
   require("plugins.indent"),
-  require("plugins.neogit"),
+  require("plugins.diffview"),
   require("plugins.gitsigns"),
   require("plugins.vim_sleuth"),
   require("plugins.bufferline"),

@@ -12,6 +12,8 @@ vim.keymap.set("v", "<leader>c", ":norm gcc<CR>")
 vim.keymap.set("n", "<leader>c", ":norm gcc<CR>")
 vim.keymap.set("n", "<leader>v", "<cmd>:vsplit<CR>")
 vim.keymap.set("n", "<leader>h", "<cmd>:split<CR>")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>x", function()
   local cmd = vim.fn.input("Run in tmux: ") -- Ask for user input
   if cmd ~= "" then
@@ -19,3 +21,6 @@ vim.keymap.set("n", "<leader>x", function()
   end
 end, { desc = "Run custom command in Vimux" })
 vim.keymap.set("n", "<leader>d", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("x", "<leader>p", "\"_dP")
