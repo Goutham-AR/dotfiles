@@ -7,6 +7,11 @@ return {
   lazy = false,
   config = function()
     require("oil").setup({
+      columns = {
+        "permissions",
+        "size",
+        "mtime",
+      },
       default_file_explorer = true,
       delete_to_trash = true,
       skip_confirm_for_simple_edits = true,

@@ -39,6 +39,8 @@ return {
     })
     lspconfig.cmake.setup({})
     lspconfig.csharp_ls.setup({ capabilities = cap })
+    lspconfig.gopls.setup({ capabilities = cap })
+    lspconfig.markdown_oxide.setup({ capabilities = cap })
 
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
     vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })
