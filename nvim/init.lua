@@ -40,4 +40,5 @@ require("lazy").setup({
   require("plugins.lazydev"),
   require("plugins.tmux_navigator"),
   require("plugins.conform"),
+  require("plugins.metal"),
 })
