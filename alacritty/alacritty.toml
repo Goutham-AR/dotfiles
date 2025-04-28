@@ -23,3 +23,6 @@ history = 100000
 normal.family = "JetBrainsMono Nerd Font"
 normal.style = "Medium"
 size = 14
+
+[terminal]
+shell = "/opt/homebrew/bin/fish"
