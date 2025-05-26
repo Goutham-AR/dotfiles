@@ -11,13 +11,19 @@ return {
         ["core.dirman"] = {
           config = {
             workspaces = {
-              secondBrain = "~/Documents/dev/SecondBrain/",
-              todo = "~/Documents/dev/SecondBrain/todo/",
-              notes = "~/Documents/dev/SecondBrain/notes/",
-              journals = "~/Documents/dev/SecondBrain/journals/",
+              journals = "~/Documents/secondbrain",
             },
           },
         },
+        ["core.journal"] = {
+          config = {
+            workspace = "journals",
+          },
+        },
+        ["core.highlights"] = {},
+        ["core.integrations.treesitter"] = {},
+        ["core.export"] = {},
+        ["core.export.markdown"] = {},
       },
     })
   end,
