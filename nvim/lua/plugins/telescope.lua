@@ -20,12 +20,10 @@ return {
   },
   config = function()
     require("telescope").setup({
-      defaults = {
+      defaults = require("telescope.themes").get_ivy({
         layout_strategies = "horizontal",
         layout_config = {
-          horizontal = {
-            prompt_position = "top",
-          },
+          height = 0.30,
         },
         sorting_strategy = "ascending",
         file_ignore_patterns = {
@@ -37,7 +35,7 @@ return {
           "out",
           "bin",
         },
-      },
+      }),
     })
     pcall(require("telescope").load_extension, "fzf")
     local builtin = require("telescope.builtin")
@@ -54,8 +52,7 @@ return {
       builtin.find_files({ cwd = vim.fn.expand("%:p:h") })
     end, { desc = "Find files in current  buffer directory" })
     vim.keymap.set("n", "<leader>/", function()
-      -- You can pass additional configuration to Telescope to change the theme, layout, etc.
-      builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+      builtin.current_buffer_fuzzy_find(require("telescope.themes").get_ivy({
         winblend = 10,
         previewer = false,
       }))
