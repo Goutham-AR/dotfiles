@@ -17,7 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   require("plugins.flash"),
-  require("plugins.render_markdown"),
   require("plugins.nvim_router"),
   require("plugins.neogit"),
   require("plugins.neorg"),
@@ -35,7 +34,7 @@ require("lazy").setup({
   require("plugins.diffview"),
   require("plugins.gitsigns"),
   require("plugins.vim_sleuth"),
-  require("plugins.bufferline"),
+  -- require("plugins.bufferline"),
   require("plugins.autopairs"),
   require("plugins.vim_sandwich"),
   require("plugins.lsp"),
