@@ -10,6 +10,6 @@ return {
       diffview = true,
       telescope = true,
     })
-
+    vim.keymap.set("n", "<leader>gg", "<cmd>Neogit<CR>", { desc = "Open Neogit" })
   end
 }
