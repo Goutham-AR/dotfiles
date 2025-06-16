@@ -1,12 +1,13 @@
 [general]
 import = [
   # "~/.config/alacritty/themes/themes/neobones_dark.toml",
-  "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
+  # "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
+  # "~/.config/alacritty/themes/vague.toml"
 ]
 
 
-[env]
-TERM = "xterm-256color"
+# [env]
+# TERM = "xterm-256color"
 
 [window]
 padding.x = 5
