@@ -28,4 +28,3 @@ vim.opt.undofile = true
 vim.opt.incsearch = true
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"
-

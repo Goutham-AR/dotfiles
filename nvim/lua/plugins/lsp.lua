@@ -1,12 +1,11 @@
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
-    -- "hrsh7th/cmp-nvim-lsp",
+    "Decodetalkers/csharpls-extended-lsp.nvim",
     "saghen/blink.cmp",
   },
   config = function()
-    -- local cap = require("cmp_nvim_lsp").default_capabilities()
-    local cap = require('blink.cmp').get_lsp_capabilities()
+    local cap = require("blink.cmp").get_lsp_capabilities()
 
     local lspconfig = require("lspconfig")
     lspconfig.clangd.setup({
@@ -38,12 +37,12 @@ return {
       capabilities = cap,
     })
     lspconfig.cmake.setup({})
-    lspconfig.csharp_ls.setup({ capabilities = cap })
     lspconfig.gopls.setup({ capabilities = cap })
     lspconfig.markdown_oxide.setup({ capabilities = cap })
     lspconfig.regols.setup({ capabilities = cap })
     -- lspconfig.jdtls.setup({ capabilities = cap })
     lspconfig.metals.setup({ capabilities = cap })
+    lspconfig.zls.setup({ capabilities = cap })
 
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
     vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })

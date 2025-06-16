@@ -23,7 +23,7 @@ return {
       defaults = require("telescope.themes").get_ivy({
         layout_strategies = "horizontal",
         layout_config = {
-          height = 0.30,
+          height = 0.50,
         },
         sorting_strategy = "ascending",
         file_ignore_patterns = {

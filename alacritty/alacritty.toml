@@ -26,3 +26,6 @@ size = 14
 
 [terminal]
 shell = "/opt/homebrew/bin/fish"
+
+[cursor.style]
+blinking = "Always"
