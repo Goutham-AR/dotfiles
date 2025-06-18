@@ -1,0 +1,42 @@
+
+# 2025-06-15 10:17:35.473675
++ls
+
+# 2025-06-15 10:17:42.681032
++help
+
+# 2025-06-15 10:24:06.740602
++select * from public.product_master_fta where product_category ILIKE 'beer' LIMIT 1;
+
+# 2025-06-15 10:24:23.028584
++select * from public.product_master_fta where product_category %ILIKE 'beer' LIMIT 1;
+
+# 2025-06-15 10:24:50.304596
++select * from public.product_category_values WHERE value ILIKE 'beer';
+
+# 2025-06-15 10:25:40.433942
++select * from public.product_master_fta where product_category = 1338141 LIMIT 1;
+
+# 2025-06-15 10:38:35.160668
++exit
+
+# 2025-06-16 11:19:31.200890
++select * from public.product_master_fta where product_category = 1338141 LIMIT 3;
+
+# 2025-06-16 11:21:04.669365
++select * from public.product_master_fta where product_category = 1338141 LIMIT 5;
+
+# 2025-06-16 11:25:09.373079
++select * from public.product_master_fta where product_category = 1338141 LIMIT 10;
+
+# 2025-06-16 12:37:49.082590
++select * from public.product_master_fta where product_category = 1338141 LIMIT 15;
+
+# 2025-06-16 13:33:26.812173
++quit
+
+# 2025-06-16 17:26:13.827567
++\e
+
+# 2025-06-16 17:28:45.445666
++exit
