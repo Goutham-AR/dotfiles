@@ -2,7 +2,6 @@ configstore/
 htop/
 uv/
 macmon.json
-fish/
 tmux/plugins/
 btop
 zellij
