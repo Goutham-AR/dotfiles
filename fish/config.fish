@@ -2,7 +2,7 @@ alias cd z
 alias cdi zi
 alias vi nvim
 alias vim nvim
-alias ls "eza -1l"
+alias ls "eza"
 set -gx LDFLAGS "-L/opt/homebrew/opt/postgresql@17/lib"
 set -gx CPPFLAGS "-I/opt/homebrew/opt/postgresql@17/include"
 set -gx EDITOR "nvim"

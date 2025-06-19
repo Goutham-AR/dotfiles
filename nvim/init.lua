@@ -25,7 +25,16 @@ require("lazy").setup({
     event = "InsertEnter",
     opts = {},
   },
-  "NMAC427/guess-indent.nvim", -- Detect tabstop and shiftwidth automatically
+  {
+    "NMAC427/guess-indent.nvim",
+    config = function()
+      require("guess-indent").setup({
+        on_tab_options = {
+          ["tabstop"] = 4,
+        },
+      })
+    end,
+  }, -- Detect tabstop and shiftwidth automatically
   require("plugins.oil"),
   {
     "christoomey/vim-tmux-navigator",
@@ -131,7 +140,7 @@ require("lazy").setup({
       vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
       vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
       vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-      vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+      vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "[ ] Find existing buffers" })
       vim.keymap.set("n", "<leader>.", function()
         builtin.find_files({ cwd = vim.fn.expand("%:p:h") })
       end, { desc = "Find files in current  buffer directory" })
@@ -323,6 +332,7 @@ require("lazy").setup({
         lua = { "stylua" },
         python = { "isort", "black" },
         javascript = { "prettierd", "prettier", stop_after_first = true },
+        json = { "prettierd", "prettier", stop_after_first = true },
       },
     },
   },
