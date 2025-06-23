@@ -6,6 +6,7 @@ alias ls "eza"
 set -gx LDFLAGS "-L/opt/homebrew/opt/postgresql@17/lib"
 set -gx CPPFLAGS "-I/opt/homebrew/opt/postgresql@17/include"
 set -gx EDITOR "nvim"
+set -gx MANPAGER "nvim +Man!"
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -21,7 +22,7 @@ end
 
 # starship init fish | source
 function fish_prompt
-	set_color brblack
+	set_color brblue
 	echo -n "["(date "+%H:%M")"] "
 	set_color blue
 	# echo -n (hostnamectl hostname)
@@ -38,7 +39,7 @@ function fish_prompt
 	set_color normal
 end
 
-
+# Scala related
 # >>> coursier install directory >>>
 set -gx PATH "$PATH:/Users/gouthamr/Library/Application Support/Coursier/bin"
 # <<< coursier install directory <<<

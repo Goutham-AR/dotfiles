@@ -21,6 +21,21 @@ rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
+    "rmagatti/auto-session",
+    lazy = false,
+    ---enables autocomplete for opts
+    ---@module "auto-session"
+    ---@type AutoSession.Config
+    opts = {},
+  },
+  {
+    "mbbill/undotree",
+    config = function()
+      vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+      vim.g.undotree_SplitWidth = 50
+    end,
+  },
+  {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     opts = {},
@@ -473,8 +488,8 @@ require("lazy").setup({
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
       local statusline = require("mini.statusline")
-      -- set use_icons to true if you have a Nerd Font
       statusline.setup({ use_icons = vim.g.have_nerd_font })
+      -- require("mini.tabline").setup()
 
       -- You can configure sections in the statusline by overriding their
       -- default behavior. For example, here we set the section for
