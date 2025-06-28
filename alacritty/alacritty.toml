@@ -1,11 +1,3 @@
-[general]
-import = [
-  # "~/.config/alacritty/themes/themes/neobones_dark.toml",
-  "~/.config/alacritty/themes/gruvbox.toml"
-  # "~/.config/alacritty/themes/vague.toml"
-]
-
-
 [env]
 TERM = "xterm-256color"
 
