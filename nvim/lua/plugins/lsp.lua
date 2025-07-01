@@ -90,6 +90,10 @@ return {
       rust_analyzer = {},
       zls = {},
       ts_ls = {},
+      cmake= {},
+      bashls = {},
+      fish_lsp = {},
+      azure_pipelines_ls = {},
       lua_ls = {
         settings = {
           Lua = {

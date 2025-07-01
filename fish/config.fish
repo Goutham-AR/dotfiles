@@ -3,6 +3,10 @@ alias cdi zi
 alias vi nvim
 alias vim nvim
 alias ls "eza"
+
+set -gx hydro_color_pwd "079caf"
+set -gx hydro_color_prompt "079caf"
+
 set -gx LDFLAGS "-L/opt/homebrew/opt/postgresql@17/lib"
 set -gx CPPFLAGS "-I/opt/homebrew/opt/postgresql@17/include"
 set -gx EDITOR "nvim"

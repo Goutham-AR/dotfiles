@@ -17,6 +17,8 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
 vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
