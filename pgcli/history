@@ -40,3 +40,159 @@
 
 # 2025-06-16 17:28:45.445666
 +exit
+
+# 2025-06-30 10:17:20.333961
++use datron;
+
+# 2025-06-30 10:17:42.892666
++grant usage on schema public to datronuser;
+
+# 2025-06-30 10:18:02.972737
++grant usage on all sequence in schema public to datronuser;
+
+# 2025-06-30 10:18:09.883863
++grant usage on all sequences in schema public to datronuser;
+
+# 2025-06-30 10:18:12.099713
++exit
+
+# 2025-06-30 10:24:54.385670
++\dt
+
+# 2025-06-30 10:25:54.337065
++select * from public.product_master_fta LIMIT 10;
+
+# 2025-06-30 10:27:29.089325
++exit
+
+# 2025-06-30 10:28:11.357467
++ALTER DATABASE datron OWNER TO datronuser;
+
+# 2025-06-30 10:28:43.699887
++exit
+
+# 2025-07-10 22:58:09.479485
++grant usage on schema public to datronuser;
+
+# 2025-07-10 22:58:40.301475
++exit
+
+# 2025-07-10 22:58:55.382670
++use datron;
+
+# 2025-07-10 22:58:57.733399
++grant usage on schema public to datronuser;
+
+# 2025-07-10 22:59:04.083417
++ALTER DATABASE datron OWNER TO datronuser;
+
+# 2025-07-10 22:59:41.019742
++grant usage on all sequences in schema public to datronuser;
+
+# 2025-07-10 22:59:43.612696
++exit
+
+# 2025-07-23 14:55:16.816192
++select * from public.feature_flag;
+
+# 2025-07-23 14:55:20.569238
++exit
+
+# 2025-07-23 14:55:31.995321
++select * from public.feature_flag;
+
+# 2025-07-23 14:55:34.512876
++exiut
+
+# 2025-07-23 14:55:36.243653
++exit
+
+# 2025-07-23 14:55:57.193334
++select * from public.feature_flag;
+
+# 2025-07-23 14:55:59.116766
++exit
+
+# 2025-07-23 14:56:13.968600
++clear
+
+# 2025-07-23 14:56:26.076604
++use datron_db_prod1;
+
+# 2025-07-23 14:56:31.139629
++select * from public.feature_flag;
+
+# 2025-07-23 14:56:33.417665
++exit
+
+# 2025-07-25 10:25:27.442192
++select * from public.package_master_fta where unit_size = 50;
+
+# 2025-07-25 10:25:33.041099
++exit
+
+# 2025-07-25 10:25:44.922032
++select * from public.package_master_fta where unit_size = 50;
+
+# 2025-07-25 10:25:51.028675
++clear
+
+# 2025-07-25 10:25:55.765899
++cls
+
+# 2025-07-25 10:26:19.939458
++select * from public.package_master_fta where package_description = '1/1 50 ml Bottle'
+
+# 2025-07-25 10:26:44.296485
++select * from public.package_master_fta where package_description = '1/1 50 ml Bottle';
+
+# 2025-07-25 10:28:14.891658
++exit
+
+# 2025-07-25 10:28:20.059450
++select * from public.package_master_fta where package_description = '1/1 50 ml Bottle';
+
+# 2025-07-25 10:29:14.836572
++select * from public.datron_package_master where enrichment_service_id = 'PKG-P39CS4AT5PNG66';
+
+# 2025-07-25 10:29:24.246334
++exit
+
+# 2025-07-25 10:41:26.338650
++select * from public.datron_package_master where enrichment_service_id = 'PKG-P39CS4AT5PNG66';
+
+# 2025-07-25 10:42:37.899178
++ls
+
+# 2025-07-25 10:42:43.481365
++current
+
+# 2025-07-25 10:42:45.700506
++exit
+
+# 2025-07-25 10:44:06.763163
++select * from public.datron_package_master where enrichment_service_id = 'PKG-P39CS4AT5PNG66';
+
+# 2025-07-25 10:44:20.315333
++select * from public.package_master_fta where package_description = '1/1 50 ml Bottle';
+
+# 2025-07-25 10:52:12.873346
++exit
+
+# 2025-07-25 11:58:05.757144
++SELECT * FROM public.results_v2 ORDER BY created_at;
+
+# 2025-07-25 11:58:16.188380
++SELECT * FROM public.results_v2 ORDER BY created_at LIMIT 1;
+
+# 2025-07-25 11:58:30.939690
++SELECT * FROM public.results_v2 ORDER BY DESC created_at LIMIT 1;
+
+# 2025-07-25 11:58:39.641061
++SELECT * FROM public.results_v2 ORDER BY created_at DESC LIMIT 1;
+
+# 2025-07-25 11:58:50.715575
++SELECT * FROM public.results_v2 ORDER BY created_at LIMIT 1;
+
+# 2025-07-28 09:16:00.846304
++exit

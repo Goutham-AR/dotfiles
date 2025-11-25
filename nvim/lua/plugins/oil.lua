@@ -20,6 +20,7 @@ return {
       },
       keymaps = {
         ["\\"] = { "actions.close", mode = "n" },
+        ["<C-d>"] = { "actions.select", opts = { horizontal = true } },
       },
     })
     vim.keymap.set("n", "\\", "<cmd>:Oil<CR>", { desc = "Open Oil" })
