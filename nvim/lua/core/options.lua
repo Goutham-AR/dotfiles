@@ -17,8 +17,11 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
+-- vim.opt.shiftwidth = 2
+-- vim.opt.softtabstop = 2
+-- vim.opt.tabstop = 2
+vim.opt.smartindent = true
+vim.opt.expandtab = true
 vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
@@ -29,4 +32,3 @@ vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 vim.opt.undofile = true
 vim.opt.incsearch = true
 vim.cmd.colorscheme("habamax")
-

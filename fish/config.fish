@@ -11,6 +11,8 @@ set -gx LDFLAGS "-L/opt/homebrew/opt/postgresql@17/lib"
 set -gx CPPFLAGS "-I/opt/homebrew/opt/postgresql@17/include"
 set -gx EDITOR "nvim"
 set -gx MANPAGER "nvim +Man!"
+set -gx OLLAMA_API_BASE "http://192.168.10.83:11434"
+set -gx DOTNET_CLI_TELEMETRY_OPTOUT "1"
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -47,3 +49,15 @@ end
 # >>> coursier install directory >>>
 set -gx PATH "$PATH:/Users/gouthamr/Library/Application Support/Coursier/bin"
 # <<< coursier install directory <<<
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/gouthamr/.lmstudio/bin
+# End of LM Studio CLI section
+
+
+# pnpm
+set -gx PNPM_HOME "/Users/gouthamr/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

@@ -3,6 +3,9 @@ return { -- Highlight, edit, and navigate code
   build = ":TSUpdate",
   main = "nvim-treesitter.configs", -- Sets main module to use for opts
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+  },
   opts = {
     ensure_installed = {
       "bash",
@@ -20,6 +23,7 @@ return { -- Highlight, edit, and navigate code
       "javascript",
       "typescript",
       "python",
+      "markdown", "markdown_inline",
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
@@ -28,7 +32,30 @@ return { -- Highlight, edit, and navigate code
       additional_vim_regex_highlighting = { "ruby" },
     },
     indent = { enable = true, disable = { "ruby" } },
+    textobjects = {
+      select = {
+        enable = true,
+        lookahead = true,
+        keymaps = {
+          ["af"] = "@function.outer",
+          ["if"] = "@function.inner",
+          ["ac"] = "@class.outer",
+          ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+          ["as"] = { query = "@local.scope", query_group = "locals", desc = "Select language scope" },
+        },
+      },
+      swap = {
+        enable = true,
+        swap_next = {
+          ["<leader>p"] = "@parameter.inner",
+        },
+        swap_previous = {
+          ["<leader>P"] = "@parameter.inner",
+        },
+      },
+    },
   },
+
   -- There are additional nvim-treesitter modules that you can use to interact
   -- with nvim-treesitter. You should go explore a few and see what interests you:
   --
