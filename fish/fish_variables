@@ -9,6 +9,7 @@ SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _hydro_git_17264:master\u2022\x20
 SETUVAR _hydro_git_17511:main\u2022\x20
 SETUVAR _hydro_git_1797:main\u2022\x20
+SETUVAR _hydro_git_1887:main\u2022\x20
 SETUVAR _hydro_git_19555:main\u2022\x20
 SETUVAR _hydro_git_19641:main\u2022\x20
 SETUVAR _hydro_git_2025:main\u2022\x20
@@ -35,6 +36,7 @@ SETUVAR _hydro_git_42439:main\x20
 SETUVAR _hydro_git_4571:fix\x2dbbl\x2dissue\u2022\x20
 SETUVAR _hydro_git_4605:\x1d
 SETUVAR _hydro_git_4670:main\x20
+SETUVAR _hydro_git_4725:\x1d
 SETUVAR _hydro_git_47523:NRE/Rel3\x2e20/UI_updates\x20
 SETUVAR _hydro_git_47731:\x1d
 SETUVAR _hydro_git_48642:scripts\x2dexecution\u2022\x20
@@ -53,9 +55,8 @@ SETUVAR _hydro_git_71105:fix\x2dfilter\x20
 SETUVAR _hydro_git_72121:main\u2022\x20
 SETUVAR _hydro_git_73893:setup\x2ddeployment\x2dpipeline\x20
 SETUVAR _hydro_git_75034:main\u2022\x20
-SETUVAR _hydro_git_75454:main\u2022\x20\u21931\x20
-SETUVAR _hydro_git_76043:main\u2022\x20\u21931\x20
 SETUVAR _hydro_git_76975:\x1d
+SETUVAR _hydro_git_80773:main\u2022\x20
 SETUVAR _hydro_git_83516:fix\x2dpipeline\x20
 SETUVAR _hydro_git_85069:main\u2022\x20
 SETUVAR _hydro_git_86335:\x1d
@@ -95,7 +96,6 @@ SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrbl
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
-SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline

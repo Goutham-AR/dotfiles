@@ -4,7 +4,7 @@ return { -- Highlight, edit, and navigate code
   main = "nvim-treesitter.configs", -- Sets main module to use for opts
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
   dependencies = {
-    "nvim-treesitter/nvim-treesitter-textobjects",
+    { "nvim-treesitter/nvim-treesitter-textobjects", lazy = true },
   },
   opts = {
     ensure_installed = {
@@ -23,7 +23,8 @@ return { -- Highlight, edit, and navigate code
       "javascript",
       "typescript",
       "python",
-      "markdown", "markdown_inline",
+      "markdown",
+      "markdown_inline",
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
