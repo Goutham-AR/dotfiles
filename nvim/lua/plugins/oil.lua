@@ -20,7 +20,7 @@ return {
       },
       keymaps = {
         ["\\"] = { "actions.close", mode = "n" },
-        ["<C-d>"] = { "actions.select", opts = { horizontal = true } },
+        ["<C-h>"] = { "actions.select", opts = { horizontal = true } },
         ["g?"] = { "actions.show_help", mode = "n" },
         ["<CR>"] = "actions.select",
         ["<C-s>"] = { "actions.select", opts = { vertical = true } },
@@ -30,7 +30,8 @@ return {
         ["<C-r>"] = "actions.refresh",
         ["-"] = { "actions.parent", mode = "n" },
         ["_"] = { "actions.open_cwd", mode = "n" },
-        ["`"] = { "actions.cd", mode = "n" },
+        -- ["`"] = { "actions.cd", mode = "n" },
+        ["<leader>cd"] = { "actions.cd", mode = "n" },
         ["g~"] = { "actions.cd", opts = { scope = "tab" }, mode = "n" },
         ["gs"] = { "actions.change_sort", mode = "n" },
         ["gx"] = "actions.open_external",
