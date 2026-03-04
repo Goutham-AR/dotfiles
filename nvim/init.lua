@@ -21,24 +21,24 @@ require("lazy").setup({
   require("plugins.context"),
   require("plugins.fzf_lua"),
   require("plugins.autopairs"),
-  require("plugins.autosession"),
+  -- require("plugins.autosession"), -- replaced with native sessions
   -- require("plugins.better"),
-  require("plugins.betterescape"),
+  -- require("plugins.betterescape"), -- replaced with direct jk mapping
   require("plugins.blink"),
   require("plugins.conform"),
   require("plugins.gitsigns"),
-  require("plugins.guessindent"),
+  -- require("plugins.guessindent"), -- replaced with vim.opt.smartindent
   require("plugins.lazydev"),
   require("plugins.lsp"),
-  require("plugins.mini"),
+  -- require("plugins.mini"), -- replaced with native statusline + treesitter
   require("plugins.neogit"),
   require("plugins.oil"),
-  require("plugins.telescope"),
+  -- require("plugins.telescope"),
   require("plugins.theme"),
   require("plugins.tmuxnavigator"),
-  require("plugins.todocomments"),
+  -- require("plugins.todocomments"), -- replaced with grep/LSP
   require("plugins.treesitter"),
-  require("plugins.undotree"),
+  -- require("plugins.undotree"), -- replaced with native g-/g+
   require("plugins.indent_guide"),
   -- require("plugins.copilot"),
   -- require("plugins.copilotChat"),

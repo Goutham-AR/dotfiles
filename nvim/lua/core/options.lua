@@ -13,17 +13,33 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { 
+  tab = "│ ", 
+  trail = "·",
+  lead = "·",
+  extends = "›",
+  precedes = "‹",
+  nbsp = "␣",
+}
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
--- vim.opt.shiftwidth = 2
--- vim.opt.softtabstop = 2
--- vim.opt.tabstop = 2
 vim.opt.smartindent = true
 vim.opt.expandtab = true
+
+-- Native session options
+vim.opt.sessionoptions = {
+  "buffers",
+  "curdir",
+  "tabpages",
+  "winsize",
+  "help",
+  "terminal",
+  "folds",
+}
+
 vim.schedule(function()
-	vim.opt.clipboard = "unnamedplus"
+  vim.opt.clipboard = "unnamedplus"
 end)
 
 vim.opt.swapfile = false
@@ -32,3 +48,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 vim.opt.undofile = true
 vim.opt.incsearch = true
 vim.cmd.colorscheme("habamax")
+
+-- Native statusline
+vim.opt.laststatus = 3
+vim.opt.showtabline = 2
