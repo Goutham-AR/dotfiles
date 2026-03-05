@@ -32,4 +32,5 @@ require("lazy").setup({
   require("plugins.tmuxnavigator"),
   require("plugins.treesitter"),
   require("plugins.indent_guide"),
+  require("plugins.roslyn"),
 })
