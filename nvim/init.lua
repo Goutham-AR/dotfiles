@@ -19,7 +19,7 @@ rtp:prepend(lazypath)
 
 require("lazy").setup({
   require("plugins.context"),
-  require("plugins.fzf_lua"),
+  require("plugins.telescope"),
   require("plugins.autopairs"),
   require("plugins.blink"),
   require("plugins.conform"),
