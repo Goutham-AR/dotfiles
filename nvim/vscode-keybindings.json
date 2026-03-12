@@ -1,0 +1,179 @@
+[
+  // ============================================
+  // Save and Close (from keymaps.lua)
+  // ============================================
+  {
+    "key": "space w",
+    "command": "workbench.action.files.save",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus"
+  },
+  // ============================================
+  // Splits (from keymaps.lua)
+  // ============================================
+  {
+    "key": "space v",
+    "command": "workbench.action.splitEditorRight",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space h",
+    "command": "workbench.action.splitEditorDown",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // ============================================
+  // LSP Keybindings (from lsp.lua)
+  // ============================================
+  {
+    "key": "space k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space l l",
+    "command": "editor.action.formatDocument",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space d s",
+    "command": "workbench.action.gotoSymbol",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space q",
+    "command": "workbench.actions.view.problems",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // ============================================
+  // Git Keybindings (from gitsigns.lua)
+  // ============================================
+  {
+    "key": "space h s",
+    "command": "git.stage",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space h r",
+    "command": "git.revertSelectedRanges",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space h p",
+    "command": "editor.action.dirtydiff.next",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space h b",
+    "command": "gitlens.toggleLineBlame",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "space t b",
+    "command": "gitlens.toggleLineBlame",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // ============================================
+  // FZF/Telescope Equivalent - Quick Open
+  // ============================================
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "space space",
+    "command": "workbench.action.showCommands",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // ============================================
+  // File Explorer (Oil equivalent)
+  // ============================================
+  {
+    "key": "space e",
+    "command": "workbench.view.explorer",
+    "when": "!explorerViewletVisible"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "explorerViewletVisible"
+  },
+  // ============================================
+  // Terminal
+  // ============================================
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  // ============================================
+  // Comment Toggle (from keymaps.lua)
+  // ============================================
+  {
+    "key": "space c",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // ============================================
+  // Disable Arrow Keys (from keymaps.lua)
+  // ============================================
+  {
+    "key": "left",
+    "command": "-cursorLeft",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "right",
+    "command": "-cursorRight",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "up",
+    "command": "-cursorUp",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "down",
+    "command": "-cursorDown",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // ============================================
+  // Search
+  // ============================================
+  {
+    "key": "escape",
+    "command": "closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  // ============================================
+  // Navigation Between Changes (Git)
+  // ============================================
+  {
+    "key": "] c",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "[ c",
+    "command": "workbench.action.editor.previousChange",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  // ============================================
+  // Copilot (from copilot.lua - Ctrl+i for accept)
+  // ============================================
+  {
+    "key": "ctrl+i",
+    "command": "editor.action.inlineSuggest.commit",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  // ============================================
+  // Show All Symbols (Workspace)
+  // ============================================
+  {
+    "key": "g shift+w",
+    "command": "workbench.action.showAllSymbols",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  }
+]
