@@ -1,0 +1,62 @@
+
+inoremap jk <Esc>
+
+" --- Basics ---
+set nocompatible
+filetype plugin indent on
+syntax on
+
+" --- Appearance ---
+set number
+set relativenumber
+
+" --- Indentation ---
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+" --- Search ---
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+" --- Navigation ---
+set path+=**
+set wildmenu
+set wildignore+=**/node_modules/**,**/.git/**,**/dist/**,**/.venv/**
+
+" --- Performance ---
+set lazyredraw
+set updatetime=300
+
+" --- Quality of Life ---
+set hidden              " switch buffers without saving
+set scrolloff=8         " keep 8 lines above/below cursor
+set sidescrolloff=8
+set nowrap
+set backspace=indent,eol,start
+set clipboard=unnamedplus
+set mouse=a
+
+" --- No swap file clutter ---
+set noswapfile
+set nobackup
+set undofile            " persistent undo (survives restarts)
+set undodir=~/.vim/undo
+
+" --- Status line (no plugin needed) ---
+set laststatus=2
+
+
+" --- Grep: use ripgrep if available ---
+if executable('rg')
+    set grepprg=rg\ --vimgrep\ --smart-case
+    set grepformat=%f:%l:%c:%m
+endif
+
+
+let mapleader = " "
+nnoremap <leader>w :w<CR>
+
