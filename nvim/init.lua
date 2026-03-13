@@ -1,8 +1,35 @@
-require("core.options")
-require("core.autocmd")
-require("core.keymaps")
+vim.opt.number         = true
+vim.opt.relativenumber = true
+vim.opt.signcolumn     = "yes"
+vim.opt.scrolloff      = 8
+vim.opt.updatetime     = 150
+vim.opt.hlsearch   = true       -- highlight all matches
+vim.opt.incsearch  = true       -- highlight incrementally as you type
+vim.opt.ignorecase = true       -- case insensitive search
+vim.opt.smartcase  = true       -- override ignorecase if pattern has uppercase
+vim.opt.inccommand = "nosplit"  -- live preview of :s substitutions (neovim only)
 
-vim.g.have_nerd_font = true
+-- Keymaps 
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { silent = true })
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>Y", '"+Y')
+vim.keymap.set("n", "<leader>p", '"+p')
+vim.keymap.set("n", "<leader>P", '"+P')
+vim.keymap.set("n", "<leader>c", "gcc", { remap = true })
+vim.keymap.set("v", "<leader>c", "gc", { remap = true })
+vim.keymap.set("i", "jk", "<Esc>")
+vim.keymap.set("n", "<leader>w", ":w<CR>")
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking text",
+  group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -18,19 +45,8 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require("lazy").setup({
-  require("plugins.context"),
-  require("plugins.telescope"),
-  require("plugins.autopairs"),
-  require("plugins.blink"),
-  require("plugins.conform"),
-  require("plugins.gitsigns"),
-  require("plugins.lazydev"),
-  require("plugins.lsp"),
-  require("plugins.neogit"),
-  require("plugins.oil"),
-  require("plugins.theme"),
   require("plugins.tmuxnavigator"),
-  require("plugins.treesitter"),
-  require("plugins.indent_guide"),
-  require("plugins.roslyn"),
 })
+
+
+
