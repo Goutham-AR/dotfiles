@@ -1,3 +1,9 @@
+# ─── Performance: skip global compinit (macOS re-runs it needlessly) ───────────
+skip_global_compinit=1
+
+# ─── Completion system ──────────────────────────────────────────────────────────
+autoload -Uz compinit && compinit
+
 export PNPM_HOME="/Users/goutham/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;

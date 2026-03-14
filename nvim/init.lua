@@ -9,6 +9,10 @@ vim.opt.ignorecase = true       -- case insensitive search
 vim.opt.smartcase  = true       -- override ignorecase if pattern has uppercase
 vim.opt.inccommand = "nosplit"  -- live preview of :s substitutions (neovim only)
 
+-- set colorscheme to habamax
+vim.opt.termguicolors = true
+vim.cmd.colorscheme("habamax")
+
 -- Keymaps 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
