@@ -50,6 +50,8 @@ rtp:prepend(lazypath)
 
 require("lazy").setup({
   require("plugins.tmuxnavigator"),
+  require("plugins.oil"),
+  require("plugins.undotree"),
 })
 
 
