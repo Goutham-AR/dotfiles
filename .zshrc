@@ -1,3 +1,9 @@
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
 # ─── Performance: skip global compinit (macOS re-runs it needlessly) ───────────
 skip_global_compinit=1
 
@@ -38,3 +44,7 @@ _git_dirty() {
 setopt PROMPT_SUBST
 # PROMPT='%F{cyan}%~%f$(_git_branch)$(_git_dirty) %F{green}❯%f '
 PROMPT='%F{cyan}%1~%f$(_git_branch)$(_git_dirty) %(?.%F{green}.%F{red})❯%f '
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
