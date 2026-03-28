@@ -1,0 +1,162 @@
+{
+  // ─── Telemetry ────────────────────────────────────────────────────────────
+  "telemetry.telemetryLevel": "off",
+  // ─── Editor ───────────────────────────────────────────────────────────────
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "editor.fontSize": 14,
+  "editor.lineNumbers": "relative",
+  "editor.renderLineHighlight": "line",
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.codeLens": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  // ─── Window ───────────────────────────────────────────────────────────────
+  "window.zoomLevel": 0,
+  "window.density.editorTabHeight": "compact",
+  // ─── Workbench ────────────────────────────────────────────────────────────
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.activityBar.location": "top",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.startupEditor": "none",
+  // ─── Terminal ─────────────────────────────────────────────────────────────
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  // ─── Explorer ─────────────────────────────────────────────────────────────
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  // ─── Git ──────────────────────────────────────────────────────────────────
+  "git.blame.statusBarItem.enabled": true,
+  "git.confirmSync": false,
+  // ─── GitLens ──────────────────────────────────────────────────────────────
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  // ─── GitHub Copilot ───────────────────────────────────────────────────────
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Use conventional commit message format."
+    }
+  ],
+  "github.copilot.nextEditSuggestions.enabled": true,
+  // ─── Chat ─────────────────────────────────────────────────────────────────
+  "chat.agent.enabled": true,
+  "chat.viewSessions.orientation": "stacked",
+  // ─── Language-Specific ────────────────────────────────────────────────────
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never",
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnType": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  // ─── Language Tools ───────────────────────────────────────────────────────
+  "python.analysis.typeCheckingMode": "standard",
+  "go.toolsManagement.autoUpdate": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "cmake.showConfigureWithDebuggerNotification": false,
+  "jdk.jdkhome": "/Users/goutham/openJdk-25.jdk/Contents/Home",
+  // ─── Plugins ──────────────────────────────────────────────────────────────
+  "cSpell.userWords": [
+    "Firestore",
+    "Goutham",
+    "maxlength",
+    "Printful",
+    "skiplist",
+    "sstable",
+    "zerolog"
+  ],
+  "oil-code.columns": [
+    "permissions",
+    "size",
+    "mtime",
+    "icon"
+  ],
+  "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+  // --- Vim ---
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Esc>"],
+      "when": ["editorFocus"],
+      "commands": [":nohl"],
+      "silent": true
+    }
+  ],
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.leader": " ",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save",
+      ]
+    },
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // {
+    //   "before": [
+    //     "<C-n>"
+    //   ],
+    //   "commands": [
+    //     ":nohl",
+    //   ]
+    // },
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save",
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "l",
+        "l"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    }
+  ]
+}
