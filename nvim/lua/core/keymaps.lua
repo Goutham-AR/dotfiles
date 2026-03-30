@@ -2,6 +2,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.keymap.set("n", "<leader>w", "<cmd>:w<CR>")
+vim.keymap.set("v", "<leader>w", "<cmd>:w<CR>")
 vim.keymap.set("i", "jk", "<Esc>")
 -- Terminal mode escape
 vim.keymap.set("t", "jk", "<C-\\><C-n>")
@@ -12,6 +13,8 @@ vim.keymap.set("n", "<leader>v", "<cmd>:vsplit<CR>")
 vim.keymap.set("n", "<leader>h", "<cmd>:split<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 vim.keymap.set("n", "J", "mzJ`z")

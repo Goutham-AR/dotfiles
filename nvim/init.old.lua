@@ -21,26 +21,28 @@ else
   rtp:prepend(lazypath)
 
   require("lazy").setup({
+    require("plugins.treesitter"),
+    require("plugins.copilot"),
     require("plugins.autosession"),
     require("plugins.compile_mode"),
     require("plugins.context"),
+    require("plugins.telescope"),
+    require("plugins.fzf_lua"),
     require("plugins.autopairs"),
     require("plugins.blink"),
     require("plugins.conform"),
     require("plugins.gitsigns"),
-    -- require("plugins.lazydev"),
+    require("plugins.lazydev"),
     require("plugins.lsp"),
-    require("plugins.fzf_lua"),
     require("plugins.neogit"),
     require("plugins.oil"),
     require("plugins.theme"),
     require("plugins.tmuxnavigator"),
     require("plugins.guessindent"),
     require("plugins.indent_guide"),
-    --- require("plugins.roslyn"),
+    require("plugins.roslyn"),
     require("plugins.mini"),
-    -- require("plugins.todocomments"),
-    -- require("plugins.undotree"),
+    require("plugins.todocomments"),
+    require("plugins.undotree"),
   })
 end
-

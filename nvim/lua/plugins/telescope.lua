@@ -18,13 +18,32 @@ return {
     { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
   },
   config = function()
+    -- Compatibility shims for removed nvim-treesitter APIs
+    local ok, parsers = pcall(require, "nvim-treesitter.parsers")
+    if ok and parsers and not parsers.ft_to_lang then
+      parsers.ft_to_lang = function(ft)
+        return vim.treesitter.language.get_lang(ft) or ft
+      end
+    end
+    -- nvim-treesitter.configs was removed; inject a shim so telescope doesn't crash
+    if not package.loaded["nvim-treesitter.configs"] then
+      package.loaded["nvim-treesitter.configs"] = {
+        is_enabled = function(_, _, _)
+          return false
+        end,
+      }
+    end
+
     require("telescope").setup({
       defaults = require("telescope.themes").get_ivy({
         layout_strategies = "horizontal",
         layout_config = {
           height = 0.50,
         },
-        sorting_strategy = "ascending",
+    end
+        preview = {
+          treesitter = false,
+        },
         file_ignore_patterns = {
           "node_modules",
           "external",
