@@ -7,6 +7,7 @@ vim.keymap.set("i", "jk", "<Esc>")
 -- Terminal mode escape
 vim.keymap.set("t", "jk", "<C-\\><C-n>")
 vim.keymap.set("n", "<C-e>", "<cmd>Bdelete<CR>")
+vim.keymap.set("n", "<C-b>", "<cmd>bdelete<CR>")
 vim.keymap.set("v", "<leader>c", ":norm gcc<CR>")
 vim.keymap.set("n", "<leader>c", ":norm gcc<CR>")
 vim.keymap.set("n", "<leader>v", "<cmd>:vsplit<CR>")
@@ -25,6 +26,9 @@ vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 vim.keymap.set('n', '<leader><leader>', ':\\<C-u>!')
+
+-- Compile mode
+vim.keymap.set("n", "<C-c>", ":Compile<CR>")
 
 -- Native undo navigation (replaces undotree)
 vim.keymap.set("n", "g-", "<cmd>undo<CR>", { desc = "Undo" })

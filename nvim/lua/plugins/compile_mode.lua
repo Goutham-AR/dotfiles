@@ -17,6 +17,7 @@ return {
         -- if you use something like `nvim-cmp` or `blink.cmp` for completion,
         -- set this to fix tab completion in command mode:
         input_word_completion = true,
+        default_command = ""
 
         -- to add ANSI escape code support, add:
         -- baleia_setup = true,
