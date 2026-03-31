@@ -21,6 +21,7 @@ else
   rtp:prepend(lazypath)
 
   require("lazy").setup({
+    require("plugins.byebye"),
     require("plugins.autosession"),
     require("plugins.compile_mode"),
     require("plugins.context"),

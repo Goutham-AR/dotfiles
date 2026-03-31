@@ -6,7 +6,7 @@ vim.keymap.set("v", "<leader>w", "<cmd>:w<CR>")
 vim.keymap.set("i", "jk", "<Esc>")
 -- Terminal mode escape
 vim.keymap.set("t", "jk", "<C-\\><C-n>")
-vim.keymap.set("n", "<C-e>", "<cmd>:bd<CR>")
+vim.keymap.set("n", "<C-e>", "<cmd>Bdelete<CR>")
 vim.keymap.set("v", "<leader>c", ":norm gcc<CR>")
 vim.keymap.set("n", "<leader>c", ":norm gcc<CR>")
 vim.keymap.set("n", "<leader>v", "<cmd>:vsplit<CR>")
