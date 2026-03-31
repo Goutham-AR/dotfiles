@@ -39,6 +39,8 @@ else
     require("plugins.indent_guide"),
     --- require("plugins.roslyn"),
     require("plugins.mini"),
+    require("plugins.render_markdown"),
+    require("plugins.flash"),
     -- require("plugins.todocomments"),
     -- require("plugins.undotree"),
   })
