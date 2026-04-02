@@ -6,6 +6,6 @@ return {
     -- "nvim-telescope/telescope.nvim", -- optional
   },
   config = function()
-    vim.keymap.set("n", "<leader>gg", vim.cmd.Neogit)
+    vim.keymap.set("n", "<leader>g", vim.cmd.Neogit)
   end,
 }

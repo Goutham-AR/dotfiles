@@ -17,7 +17,7 @@ return {
       },
       keymaps = {
         ["\\"] = { "actions.close", mode = "n" },
-        ["<C-h>"] = { "actions.select", opts = { horizontal = true } },
+        ["<C-x"] = { "actions.select", opts = { horizontal = true } },
         ["g?"] = { "actions.show_help", mode = "n" },
         ["<CR>"] = "actions.select",
         ["<C-s>"] = { "actions.select", opts = { vertical = true } },
