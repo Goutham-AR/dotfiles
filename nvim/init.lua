@@ -29,7 +29,7 @@ else
     require("plugins.blink"),
     require("plugins.conform"),
     require("plugins.gitsigns"),
-    -- require("plugins.lazydev"),
+    require("plugins.lazydev"),
     require("plugins.lsp"),
     require("plugins.fzf_lua"),
     require("plugins.neogit"),

@@ -18,7 +18,11 @@ return {
       fzf.keymaps()
     end, { desc = "[S]earch [K]eymaps" })
     vim.keymap.set("n", "<leader>f", function()
-      fzf.files()
+      fzf.files({
+        hidden = true,
+        file_ignore_patterns = { "node_modules", ".venv", "build", "bin" },
+        toggle_hidden_flag = "",
+      })
     end, { desc = "[S]earch [F]iles" })
     vim.keymap.set("n", "<leader>ss", function()
       fzf.builtin()
