@@ -20,6 +20,9 @@ return {
       python = { "isort", "black" },
       javascript = { "prettierd", "prettier", stop_after_first = true },
       json = { "prettierd", "prettier", stop_after_first = true },
+      make = { "checkmake" },
+      c = { "clang-format" },
+      cpp = { "clang-format" },
     },
   },
 }
