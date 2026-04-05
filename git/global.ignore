@@ -1,0 +1,4 @@
+_g_docs/
+.venv
+.DS_Store
+.env

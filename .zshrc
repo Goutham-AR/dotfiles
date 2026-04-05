@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,9 +42,14 @@ _git_dirty() {
 
 # Prompt
 setopt PROMPT_SUBST
+
 # PROMPT='%F{cyan}%~%f$(_git_branch)$(_git_dirty) %F{green}❯%f '
-PROMPT='%F{cyan}%1~%f$(_git_branch)$(_git_dirty) %(?.%F{green}.%F{red})❯%f '
+# PROMPT='%F{cyan}%1~%f$(_git_branch)$(_git_dirty) %(?.%F{green}.%F{red})❯%f '
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export KEYTIMEOUT=1
+
+export COPILOT_CUSTOM_INSTRUCTIONS_DIRS="/Users/goutham/.config/ai/instructions"
+export EDITOR=nvim
