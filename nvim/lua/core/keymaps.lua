@@ -39,7 +39,7 @@ vim.keymap.set('n', '<leader>rp', function()
   vim.fn.setreg('+', vim.fn.expand('%'))
   print("Copied: " .. vim.fn.expand('%'))
 end, { desc = 'Copy file path' })
-
+vim.keymap.set("n", "<leader>o", '<cmd>LspClangdSwitchSourceHeader<CR>')
 -- Search TODO/FIXME/HACK (replaces todo-comments)
 -- vim.keymap.set("n", "<leader>ft", function()
   -- require("fzf-lua").grep({ search = "TODO\\|FIXME\\|HACK\\|NOTE" })
