@@ -34,6 +34,11 @@ vim.keymap.set("n", "<C-c>", ":Compile<CR>")
 vim.keymap.set("n", "g-", "<cmd>undo<CR>", { desc = "Undo" })
 vim.keymap.set("n", "g+", "<cmd>redo<CR>", { desc = "Redo" })
 vim.keymap.set("n", "<leader>u", "<cmd>undolist<CR>", { desc = "Show undo list" })
+-- Copy path to clipboard
+vim.keymap.set('n', '<leader>rp', function()
+  vim.fn.setreg('+', vim.fn.expand('%'))
+  print("Copied: " .. vim.fn.expand('%'))
+end, { desc = 'Copy file path' })
 
 -- Search TODO/FIXME/HACK (replaces todo-comments)
 -- vim.keymap.set("n", "<leader>ft", function()
