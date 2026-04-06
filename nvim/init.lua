@@ -32,6 +32,7 @@ else
     require("plugins.lazydev"),
     require("plugins.lsp"),
     require("plugins.fzf_lua"),
+    require("plugins.telescope"),
     require("plugins.neogit"),
     require("plugins.oil"),
     require("plugins.theme"),
@@ -43,7 +44,7 @@ else
     require("plugins.render_markdown"),
     require("plugins.flash"),
     -- require("plugins.todocomments"),
-    -- require("plugins.undotree"),
+    require("plugins.undotree"),
   })
 end
 

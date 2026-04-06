@@ -6,16 +6,6 @@ return {
     winopts = {
       split = "belowright new",
     },
-    files = {
-      fd_opts = [[--color=never --type f --hidden --no-ignore ]]
-        .. [[--exclude .git --exclude node_modules --exclude external ]]
-        .. [[--exclude dist --exclude .venv --exclude build --exclude out --exclude bin]],
-    },
-    grep = {
-      rg_opts = [[--column --line-number --no-heading --color=always --smart-case --max-columns=4096 -e --hidden --no-ignore ]]
-        .. [[-g '!.git/*' -g '!node_modules/*' -g '!external/*' -g '!dist/*' ]]
-        .. [[-g '!.venv/*' -g '!build/*' -g '!out/*' -g '!bin/*']],
-    },
   },
   config = function()
     local fzf = require("fzf-lua")
@@ -27,9 +17,9 @@ return {
     vim.keymap.set("n", "<leader>sk", function()
       fzf.keymaps()
     end, { desc = "[S]earch [K]eymaps" })
-    vim.keymap.set("n", "<leader>f", function()
-      fzf.files()
-    end, { desc = "[S]earch [F]iles" })
+    -- vim.keymap.set("n", "<leader>f", function()
+      -- fzf.files()
+    -- end, { desc = "[S]earch [F]iles" })
     vim.keymap.set("n", "<leader>ss", function()
       fzf.builtin()
     end, { desc = "[S]earch [S]elect FZF" })
