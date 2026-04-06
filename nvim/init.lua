@@ -38,7 +38,7 @@ else
     require("plugins.tmuxnavigator"),
     require("plugins.guessindent"),
     require("plugins.indent_guide"),
-    --- require("plugins.roslyn"),
+    require("plugins.roslyn"),
     require("plugins.mini"),
     require("plugins.render_markdown"),
     require("plugins.flash"),
