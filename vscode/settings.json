@@ -508,5 +508,6 @@
   "git.confirmSync": false,
   "explorer.confirmDragAndDrop": false,
   "chat.editing.confirmEditRequestRemoval": false,
-  "git.blame.editorDecoration.enabled": false
+  "git.blame.editorDecoration.enabled": false,
+  "markdown-preview-enhanced.previewTheme": "atom-dark.css"
 }

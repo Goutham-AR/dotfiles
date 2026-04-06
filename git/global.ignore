@@ -3,3 +3,5 @@ _g_tasks/
 .venv
 .DS_Store
 .env
+**/bin/*
+**/obj/*

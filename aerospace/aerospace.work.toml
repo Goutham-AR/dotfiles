@@ -1,0 +1,141 @@
+# Reference: https://github.com/i4/i3/blob/next/etc/config
+
+config-version = 2
+
+# In i3, all workspaces are phantom
+persistent-workspaces = []
+
+# i3 doesn't have "normalizations" feature that why we disable them here.
+# But the feature is very helpful.
+# Normalizations eliminate all sorts of weird tree configurations that don't make sense.
+# Give normalizations a chance and enable them back.
+enable-normalization-flatten-containers = false
+enable-normalization-opposite-orientation-for-nested-containers = false
+# Mouse follows focus when focused monitor changes
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+[mode.main.binding]
+    # --- Terminal Launcher ---
+    # Opens your default terminal (useful for Tmux/Neovim flow)
+    alt-enter = 'exec-and-forget open -a Terminal'
+
+    # --- Focus (HJKL) ---
+    alt-h = 'focus --boundaries-action wrap-around-the-workspace left'
+    alt-j = 'focus --boundaries-action wrap-around-the-workspace down'
+    alt-k = 'focus --boundaries-action wrap-around-the-workspace up'
+    alt-l = 'focus --boundaries-action wrap-around-the-workspace right'
+
+    # --- Move Windows ---
+    alt-shift-h = 'move left'
+    alt-shift-j = 'move down'
+    alt-shift-k = 'move up'
+    alt-shift-l = 'move right'
+
+    # --- Splitting ---
+    alt-minus = 'split horizontal'
+    alt-slash = 'split vertical'
+
+    # --- Layouts (Re-mapped to avoid S, W, B conflicts) ---
+    alt-f = 'fullscreen'
+    alt-comma = 'layout v_accordion'               # Replaced alt-s
+    alt-period = 'layout h_accordion'              # Replaced alt-w
+    alt-e = 'layout tiles horizontal vertical' 
+    alt-shift-space = 'layout floating tiling'
+
+    # --- Workspaces (Mnemonic for your workflow) ---
+    alt-t = 'workspace T' # Terminal
+    alt-v = 'workspace V' # VSCode
+    alt-b = 'workspace B' # Brave
+    alt-c = 'workspace C' # Communication (Teams)
+    alt-m = 'workspace M' # Mail (Outlook)
+    alt-s = 'workspace S' # Spotify
+    alt-d = 'workspace D' # Database Tools
+    alt-n = 'workspace N' # Notes (Obsidian)
+    alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+
+    # --- Move Node to Workspace ---
+    alt-shift-t = 'move-node-to-workspace T'
+    alt-shift-v = 'move-node-to-workspace V'
+    alt-shift-b = 'move-node-to-workspace B'
+    alt-shift-c = 'move-node-to-workspace C'
+    alt-shift-m = 'move-node-to-workspace M'
+    alt-shift-s = 'move-node-to-workspace S'
+    alt-shift-d = 'move-node-to-workspace D'
+    alt-shift-n = 'move-node-to-workspace N'
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+
+    # --- System ---
+   # Changed from alt-shift-c (conflict with Teams) to alt-shift-r
+    alt-shift-r = 'reload-config'
+    alt-r = 'mode resize'
+
+[mode.resize.binding]
+    h = 'resize width -50'
+    j = 'resize height +50'
+    k = 'resize height -50'
+    l = 'resize width +50'
+    enter = 'mode main'
+    esc = 'mode main'
+
+
+# --- Window Automation ---
+
+# Terminal (Alacritty) -> Workspace T
+[[on-window-detected]]
+if.app-id = 'org.alacritty'
+run = 'move-node-to-workspace T'
+
+# VS Code -> Workspace V
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace V'
+
+# Brave Browser -> Workspace B
+[[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace B'
+
+# Microsoft Teams -> Workspace C (Communication)
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2' # New Teams ID (Teams 'Work or School')
+run = 'move-node-to-workspace C'
+
+# Microsoft Outlook -> Workspace M (Mail)
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = 'move-node-to-workspace M'
+
+# Spotify -> Workspace S
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace S'
+
+# Database Tools (DBeaver / Compass) -> Workspace D
+[[on-window-detected]]
+if.app-id = 'io.dbeaver.DBeaver'
+run = 'move-node-to-workspace D'
+
+[[on-window-detected]]
+if.app-id = 'com.mongodb.compass'
+run = 'move-node-to-workspace D'
+
+# Obsidian -> Workspace N (Notes)
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace N'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+if.window-title-regex-substring = 'Meeting|Notification|Preview'
+run = 'layout floating'
+
+# Ignore Teams screensharing/utility overlays so they don't move your focus
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+if.window-title-regex-substring = 'Microsoft Teams Call'
+run = 'layout floating'
+
+[[on-window-detected]]
+run = 'layout h_accordion'
