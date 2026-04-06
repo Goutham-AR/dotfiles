@@ -47,6 +47,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-s = 'workspace S'  # Spotify
     alt-c = 'workspace C'  # Chat (WhatsApp/FaceTime)
     alt-m = 'workspace M'  # Email
+    alt-1 = 'workspace 1'  
+    alt-2 = 'workspace 2'  
+    alt-3 = 'workspace 3'  
+
 
     # --- Move Node to Workspace ---
     alt-shift-t = 'move-node-to-workspace T'
@@ -55,6 +59,9 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-shift-s = 'move-node-to-workspace S'
     alt-shift-c = 'move-node-to-workspace C'
     alt-shift-m = 'move-node-to-workspace M'
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+    alt-shift-3 = 'move-node-to-workspace 3'
 
     # --- System ---
     alt-shift-r = 'reload-config'
