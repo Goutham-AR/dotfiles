@@ -1,6 +1,6 @@
 return { -- Highlight, edit, and navigate code
   "nvim-treesitter/nvim-treesitter",
-  branch = "main",
+  branch = "0.9.3",
   build = ":TSUpdate",
   main = "nvim-treesitter.config", -- Sets main module to use for opts
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`

@@ -21,6 +21,7 @@ else
   rtp:prepend(lazypath)
 
   require("lazy").setup({
+    require("plugins.diffview"),
     require("plugins.byebye"),
     require("plugins.autosession"),
     require("plugins.compile_mode"),
@@ -45,6 +46,7 @@ else
     require("plugins.flash"),
     -- require("plugins.todocomments"),
     require("plugins.undotree"),
+    -- require("plugins.neorg"),
   })
 end
 
