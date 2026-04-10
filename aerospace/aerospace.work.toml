@@ -139,3 +139,7 @@ run = 'layout floating'
 
 [[on-window-detected]]
 run = 'layout h_accordion'
+
+[workspace-to-monitor-force-assignment]
+# Force Workspace B (Brave) to the external LG monitor
+B = 'LG IPS FULLHD'
