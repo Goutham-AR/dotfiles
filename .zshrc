@@ -51,5 +51,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export KEYTIMEOUT=1
 
-export COPILOT_CUSTOM_INSTRUCTIONS_DIRS="/Users/goutham/.config/ai/instructions"
 export EDITOR=nvim
+export MANPAGER='nvim +Man!'
