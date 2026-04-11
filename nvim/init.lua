@@ -21,6 +21,7 @@ else
   rtp:prepend(lazypath)
 
   require("lazy").setup({
+    require("plugins.bufferline"),
     require("plugins.diffview"),
     require("plugins.byebye"),
     require("plugins.autosession"),
@@ -41,12 +42,12 @@ else
     require("plugins.guessindent"),
     require("plugins.indent_guide"),
     require("plugins.roslyn"),
-    require("plugins.mini"),
-    require("plugins.render_markdown"),
+    -- require("plugins.render_markdown"),
+    require("plugins.markview"),
     require("plugins.flash"),
+    require("plugins.lualine"),
     -- require("plugins.todocomments"),
     require("plugins.undotree"),
-    -- require("plugins.neorg"),
   })
 end
 
