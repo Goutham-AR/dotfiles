@@ -53,6 +53,7 @@ return {
           "bin",
           ".cache",
           "^.git/",
+          ".next",
         },
         extensions = {
           ["ui-select"] = {
