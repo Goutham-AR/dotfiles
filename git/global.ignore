@@ -5,3 +5,4 @@ _g_tasks/
 .env
 **/bin/*
 **/obj/*
+.claude

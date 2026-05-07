@@ -30,6 +30,9 @@ return { -- Highlight, edit, and navigate code
     auto_install = true,
     highlight = {
       enable = true,
+      disable = function(_, bufnr)
+        return vim.bo[bufnr].filetype == "oil"
+      end,
       additional_vim_regex_highlighting = { "ruby" },
     },
     indent = { enable = true, disable = { "ruby" } },

@@ -3,6 +3,10 @@ return {
     'lewis6991/gitsigns.nvim',
     opts = {
       on_attach = function(bufnr)
+        if vim.api.nvim_buf_get_name(bufnr):match("^oil://") then
+          return false
+        end
+
         local gitsigns = require 'gitsigns'
 
         local function map(mode, l, r, opts)
