@@ -46,6 +46,8 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-t = 'workspace T' # Terminal
     alt-v = 'workspace V' # VSCode
     alt-b = 'workspace B' # Brave
+    alt-w = 'workspace W' # Brave work
+    alt-o = 'workspace O' # Obsidian
     alt-c = 'workspace C' # Communication (Teams)
     alt-m = 'workspace M' # Mail (Outlook)
     alt-s = 'workspace S' # Spotify
@@ -58,6 +60,8 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-shift-t = 'move-node-to-workspace T'
     alt-shift-v = 'move-node-to-workspace V'
     alt-shift-b = 'move-node-to-workspace B'
+    alt-shift-w = 'move-node-to-workspace W'
+    alt-shift-o = 'move-node-to-workspace O'
     alt-shift-c = 'move-node-to-workspace C'
     alt-shift-m = 'move-node-to-workspace M'
     alt-shift-s = 'move-node-to-workspace S'
@@ -124,7 +128,7 @@ run = 'move-node-to-workspace D'
 # Obsidian -> Workspace N (Notes)
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace N'
+run = 'move-node-to-workspace O'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'

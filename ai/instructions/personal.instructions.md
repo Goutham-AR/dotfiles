@@ -8,3 +8,13 @@ applyTo: '**'
 from the appropriate location.
 - Never ever commit any code, I will do that. It is my duty not yours.
 - If any refactor/code change is done to my implementation, do tell me the reason why your change is required/better than mine
+- After each task, provide a "Learning Points" section summarizing any concepts, patterns, or best practices worth noting from the run.
+
+
+## Typescript
+- Syntax validity ≠ runtime correctness: Code can be perfectly valid TypeScript and still fail at execution. Always consider runtime behavior, not just static analysis.
+- Dynamic imports return a namespace object: await import() always returns a module namespace, not the module's default export directly. The actual exports live under .default for CommonJS modules.
+- Module interop is not transparent: Mixing CommonJS and ESM introduces resolution differences that are invisible at compile time but fatal at runtime. Never assume the two systems behave identically.
+- Always verify module resolution assumptions: Before declaring an import strategy "proper," confirm how the target package actually exposes its exports — don't rely on intuition or surface-level patterns.
+- Lazy loading adds indirection risk: Dynamic imports are useful for performance, but they defer errors to runtime instead of compile time, making issues harder to catch early.
+
