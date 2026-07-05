@@ -35,7 +35,7 @@ else
     require("plugins.lazydev"),
     require("plugins.lsp"),
     require("plugins.fzf_lua"),
-    require("plugins.telescope"),
+    -- require("plugins.telescope"),
     require("plugins.neogit"),
     require("plugins.oil"),
     require("plugins.theme"),

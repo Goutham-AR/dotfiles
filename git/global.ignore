@@ -1,5 +1,6 @@
 _g_docs/
 _g_tasks/
+_g_tools/
 .venv
 .DS_Store
 .env
